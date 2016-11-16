@@ -1,6 +1,6 @@
 {
-  "name": "recluster",
-  "version": "0.3.7",
+  "name": "@dynamicaction/recluster",
+  "version": "0.3.7+001",
   "description": "Clustering library with support for zero-downtime reloading",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/doxout/recluster.git"
+    "url": "git://github.com/dynamicaction/recluster.git"
   },
   "keywords": [
     "load",
