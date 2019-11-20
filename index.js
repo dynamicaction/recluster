@@ -117,11 +117,7 @@ module.exports = function(file, opt) {
     function killTimeout(worker) {
         function trykillfn() {
             try {
-                if (worker.kill) {
-                    worker.kill();
-                } else {
-                    worker.destroy();
-                }
+                worker.kill('SIGKILL');
             } catch(e) {}
         }
 
@@ -131,7 +127,6 @@ module.exports = function(file, opt) {
             // possible leftover worker that has no channel
             // estabilished will throw. Ignore.
             try {
-                worker.send({cmd: 'disconnect'});
                 worker.disconnect();
             } catch (e) { }
         } else {
